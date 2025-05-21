@@ -15,10 +15,5 @@ class PopController extends AbstractController
        return new Response($contents);
        #return new Response('<h1>Hello, Symfony!</h1>');
     }
-
-    #[Route('/', name: 'homepage')]
-    public function homepage(): Response
-    {
-        return new Response('<h1>Homepage route working!</h1>');
-    }
+ 
 }

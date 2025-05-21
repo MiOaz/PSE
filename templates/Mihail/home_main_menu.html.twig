@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Meniu principal{% endblock %}
+
+{% block stylesheets %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f9f9f9;
+        margin: 40px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .menu-box {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: white;
+        padding: 30px 50px;
+        border-radius: 12px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 8px 15px rgba(37, 117, 252, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        min-width: 180px;
+    }
+    .menu-box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 25px rgba(37, 117, 252, 0.6);
+        background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+    <h1>Meniu principal</h1>
+    <div class="menu">
+        <a href="{{ path('static_pages') }}" class="menu-box">Pagini statice</a>
+        <a href="{{ path('dynamic_pages') }}" class="menu-box">Pagini dinamice</a>
+        <a href="{{ path('blogs') }}" class="menu-box">Blog</a>
+    </div>
+{% endblock %}
